@@ -4,7 +4,7 @@ Made with my mentor at [Bloc](http://bloc.io).
 
 Heroku app name: ellen-bloccit
 
-localhost:3000
+[Direct link](http://ellen-bloccit.herokuapp.com)
 
 
 == README
