@@ -35,3 +35,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+#Setup
+
+<p>ENV variables may be found in config/application.yml, and references to them are in config/application.example.yml.</p>
