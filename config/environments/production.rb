@@ -79,5 +79,5 @@ Bloccit::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   #http://bloccit.herokuapp.com
-  config.action_mailer.default_url_options = {Host: 'ellen-bloccit.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'ellen-bloccit.herokuapp.com'}
 end
