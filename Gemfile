@@ -9,6 +9,8 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'figaro'
 
+gem 'redcarpet'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
@@ -36,6 +38,7 @@ gem 'jquery-rails'
 gem 'faker'
 gem 'devise'
 gem 'pundit'
+gem 'simple_form'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
