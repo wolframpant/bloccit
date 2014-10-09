@@ -11,6 +11,12 @@ gem 'figaro'
 
 gem 'redcarpet'
 
+gem 'carrierwave'
+
+gem 'mini_magick', '~> 3.5.0'
+
+gem 'fog'
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
