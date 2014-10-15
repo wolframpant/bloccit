@@ -9,7 +9,7 @@
   </ul>
 </div>
 <% end %>
-<%= form_group_tag(post.errors[:comment]) do %>
+<%= form_group_tag(post.errors[:comment]) do if current_user %>
   <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter comment" %>
   <% end %>
 <div class="form-group">
