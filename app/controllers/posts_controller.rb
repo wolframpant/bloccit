@@ -12,6 +12,21 @@ class PostsController < ApplicationController
     authorize @post
   end
 
+  def destroy
+    @topic = Topic.find(params[:topic_id])
+    @post = Post.find(params[:id])
+    title = @post.title
+    authorize @post
+
+    if @post.destroy 
+      flash[:notice] = "\"#{title}\" was deleted successfully."
+      redirect_to @topic
+    else
+      flash[:error] = "There was an error deleting the post."
+      render :show
+    end
+  end
+
   def create
     @topic = Topic.find(params[:topic_id])
     @post = current_user.posts.build(post_params)
