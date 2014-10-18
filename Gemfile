@@ -5,6 +5,10 @@ gem 'rails', '4.0.9'
 
 ruby '2.0.0'
 
+group :test do
+  gem 'rspec-rails', '~> 3.1.0'
+end
+
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'figaro'

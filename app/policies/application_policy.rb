@@ -6,11 +6,6 @@ class ApplicationPolicy
     @record = record
   end
 
-  def can_moderate?(user, record)
-    user.present? && (record.user == user || user.role?(:admin) || user.role?(:moderator))
-  end
-
-
   def index?
     false
   end
@@ -41,6 +36,12 @@ class ApplicationPolicy
 
   def scope
     record.class
+  end
+
+  private
+
+  def can_moderate?(user, record)
+    user.present? && (record.user == user || user.role?(:admin) || user.role?(:moderator))
   end
 
   class Scope
