@@ -16,4 +16,3 @@ class FavoriteMailer < ActionMailer::Base
   end
 end
 
-end
