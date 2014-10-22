@@ -2,11 +2,9 @@
 
  describe User do
 
-  include TestFactories
-
   before do
-    @post = associated_post
-    @user = authenticated_user
+    @post = create(:post)
+    @user = create(:user)
   end
 
   describe "#favorited(post)" do
@@ -32,7 +30,7 @@
       end
 
       it "returns users ordered by comments + posts" do
-        expect(User.top_rate).to eq(@user2, @user1)
+        expect(User.top_rated).to eq([@user2, @user1])
       end
 
       it "stores a 'posts_count on user" do
@@ -46,3 +44,4 @@
       end
     end
   end
+end
