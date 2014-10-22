@@ -22,6 +22,8 @@ gem 'carrierwave'
 
 gem 'mini_magick', '~> 3.5.0'
 
+gem 'newrelic_rpm'
+
 gem 'fog'
 
 group :production do
