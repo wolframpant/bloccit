@@ -9,7 +9,7 @@
     <p><%= markdown @post.body %></p>
     </div>
     <div class="col-md-8">
-      <% @post.comments.each do |comment| %>
+        <% @post.comments.each do |comment| %>
         <%= render partial: 'comments/comment', locals: {user: @user, comment: comment} %>
       <% end %>
       </div>
