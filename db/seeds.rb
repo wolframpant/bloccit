@@ -49,8 +49,8 @@ end
 
 #Create an admin user
 admin = User.new(
-  name: 'Admin User',
-  email: 'admin@example.com',
+  name: 'Ellen',
+  email: 'llnwlfsn@gmail.com',
   password: 'helloworld',
   role: 'admin'
 )
@@ -78,5 +78,6 @@ member.save!
 
 puts "Seed finished"
 puts "#{User.count} users created"
+puts "#{Topic.count} topics created"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"

@@ -32,5 +32,5 @@ Bloccit::Application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.raise_delivery_errors = true
-  
+    
 end
