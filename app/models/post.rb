@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  
   has_many :comments, dependent: :destroy
   belongs_to :user
   belongs_to :topic
@@ -7,6 +8,7 @@ class Post < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  # users may vote posts up or down
   def up_votes
     votes.where(value: 1).count
   end
@@ -26,7 +28,8 @@ class Post < ActiveRecord::Base
   validates :body, length: {minimum: 20}, presence: true
   validates :topic, presence: true
   validates :user, presence: true
-  
+
+  # rank based on age and points
   def update_rank
     age = (created_at - Time.new(1970,1,1)) / (60*60*24)
     new_rank = points + age

@@ -6,6 +6,7 @@ class Comment < ActiveRecord::Base
   validates :body, length: {minimum: 5}, presence: true
   validates :user_id, presence: true
 
+  # for users who have declared the given post as a "favorite"
   after_create :send_favorite_emails
 
   private
