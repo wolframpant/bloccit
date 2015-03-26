@@ -3,6 +3,7 @@ class Topics::PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @topic = Topic.find(params[:topic_id])
+    # using will_paginate gem
     @comments = @post.comments.paginate(page: params[:page], per_page: 10)
     authorize @topic
   end
@@ -10,6 +11,7 @@ class Topics::PostsController < ApplicationController
   def new
     @topic = Topic.find(params[:topic_id])
     @post = Post.new
+    #see post_policy.rb
     authorize @post
   end
 
@@ -48,12 +50,6 @@ class Topics::PostsController < ApplicationController
     @post = Post.find(params[:id])
     authorize @post
   end
-
-  # def show
-  #  @post = Post.find(params[:id])
-  #  @comments = @posts.comments.paginate(page: params[:page], per_page: 10)
-  #  authorize @post
-  # end
 
   def update
     @topic = Topic.find(params[:topic_id])

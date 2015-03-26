@@ -12,16 +12,19 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
 end
 
+# to use bootstrap's styling matrix
 gem 'bootstrap-sass', '~> 3.1.1'
 
+# for protecting secret keys and ENV variables
 gem 'figaro'
 
 gem 'will_paginate', '~> 3.0.5'
 
 gem 'redcarpet'
 
+# for uploading images
 gem 'carrierwave'
-
+# works with carrierwave to upload images
 gem 'mini_magick', '~> 3.5.0'
 
 gem 'newrelic_rpm'
@@ -52,8 +55,12 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# create fake content for testing and coding
 gem 'faker'
+
+# allow users to register and sign in to app
 gem 'devise'
+
 gem 'pundit'
 gem 'simple_form'
 
